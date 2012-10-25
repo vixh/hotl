@@ -1,0 +1,21 @@
+<head>
+  <title>Todos</title>
+</head>
+
+<body>
+  <div id="reservation-table">
+    {{> reservation_table}}
+  </div>
+</body>
+
+<template name="reservation_table">
+	<ul>
+		{{#each rooms}}
+			<li>#{{num}} ----- {{capacity}}</li>
+		{{/each}}
+	</ul>
+	
+	{{#each reservations}}
+		<div>{{check_in}} ----- {{check_out}}</div>
+	{{/each}}
+</template>
